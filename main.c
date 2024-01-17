@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     init_args();
     file_stream(argv[1]);
 
-    while (getline(&args->text_line, &n, args-stream) != -1)
+    while (getline(&args->text_line, &n, args->stream) != -1)
     {
         printf("%s", args->text_line);
     }
