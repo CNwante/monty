@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -53,5 +54,10 @@ extern argument_t *args;
 
 /*ERRORS*/
 void validate_args(int argc);
+void malloc_failed(void);
+void fopen_failed(char *file_name);
+
+void init_args();
+void file_stream(char *file_name);
 
 #endif /*__MONTY_H__*/
