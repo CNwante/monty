@@ -35,6 +35,22 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct argument_s - Store variables.
+ * @stream: Connects to the stream from a file.
+ * @text_line: String read from the stream.
+ *
+ * Description: Variables for storing functions
+ */
+
+typedef struct argument_s
+{
+	FILE *stream;
+	char *text_line;
+} argument_t;
+
+extern argument_t *args;
+
 /*ERRORS*/
 void validate_args(int argc);
 
