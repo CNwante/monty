@@ -1,4 +1,8 @@
+#define _GNU_SOURCE
+#define _POSIX_C_SOURCE 200809L
 #include "monty.h"
+
+argument_t *args = NULL;
 
 int main(int argc, char **argv)
 {
