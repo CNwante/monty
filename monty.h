@@ -60,8 +60,14 @@ extern argument_t *args;
 void validate_args(int argc);
 void malloc_failed(void);
 void fopen_failed(char *file_name);
+void invalid_opcode(void);
 
 void init_args();
 void file_stream(char *file_name);
+void tokenize(void);
+void close_strem(void);
+void get_opcode(void);
+void exec_opcode(void);
+void free_tokens_mem(void);
 
 #endif /*__MONTY_H__*/
