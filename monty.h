@@ -48,6 +48,10 @@ typedef struct argument_s
 {
 	FILE *stream;
 	char *text_line;
+	unsigned int line_number;
+	char **tokens;
+	char num_tokens;
+	instruction_t *instruction;
 } argument_t;
 
 extern argument_t *args;
