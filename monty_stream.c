@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <fcntl.h>
+#include <stdio.h>
 
 /*Include betty docs*/
 
@@ -12,18 +14,9 @@ void fopen_failed(char *file_name)
 /*Include betty docs*/
 void file_stream(char *file_name)
 {
-    int fd;
-
-    fd = open(file_name, O_RDONLY);
-    if (fd == -1)
-    {
-        fopen_failed(file_name);
-    }
-    
-    args->stream = fopen(fd, "r");
+    args->stream = fopen(file_name, "r");
     if (args->stream == NULL)
     {
-        close(fd);
         fopen_failed(file_name);
     }
 }
