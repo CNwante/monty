@@ -13,7 +13,7 @@ void invalid_opcode(void)
 /*Betty docs goe here*/
 
 void get_opcode(void)
-{
+{/*
     int i = 0;
     instruction_t actions[] = {
         {"push", &push}, {"pop", &pop},
@@ -27,7 +27,7 @@ void get_opcode(void)
         {"mod", &mod}, {NULL, NULL}
     }
 
-    if args_>num_tokens == 0)
+    if args->num_tokens == 0)
         return;
 
     while (actions[i].opcode != NULL)
@@ -40,5 +40,5 @@ void get_opcode(void)
         }
         i++;
     }
-    invalid_opcode();
+    invalid_opcode(); */
 }
