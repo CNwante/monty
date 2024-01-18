@@ -1,4 +1,3 @@
-#define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
 int main(int argc, char **argv)
@@ -19,7 +18,7 @@ int main(int argc, char **argv)
     }
 
     close_strem();
-    free_args_mem();
+    /*free_args_mem();*/
 
     return (0);
 }

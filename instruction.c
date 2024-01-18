@@ -6,7 +6,7 @@ void invalid_opcode(void)
     fprintf(stderr, "L%d: unknown instruction %s\n", args->line_number, args->tokens[0]);
     close_strem();
     free_tokens_mem();
-    free_args_mem();
+    /*free_args_mem();*/
     exit(EXIT_FAILURE);
 }
 

@@ -7,6 +7,6 @@ void close_strem(void)
     if (args->stream == NULL)
         return;
 
-    flcose(args->stream);
+    fclose(args->stream);
     args->stream = NULL;
 }
