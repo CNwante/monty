@@ -20,7 +20,7 @@ void file_stream(char *file_name)
         fopen_failed(file_name);
     }
     
-    args->stream = fdopen(fd, "r");
+    args->stream = fopen(fd, "r");
     if (args->stream == NULL)
     {
         close(fd);
