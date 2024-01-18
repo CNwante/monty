@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
 int main(int argc, char **argv)
@@ -10,8 +11,15 @@ int main(int argc, char **argv)
 
     while (getline(&args->text_line, &n, args->stream) != -1)
     {
-        printf("%s", args->text_line);
+        args->line_number += 1;
+        tokenize();
+        get_opcode();
+        exec_opcode();
+        free_tokens_mem();
     }
+
+    close_strem();
+    free_args_mem();
 
     return (0);
 }
