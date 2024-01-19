@@ -71,4 +71,10 @@ void get_opcode(void);
 void exec_opcode(void);
 void free_tokens_mem(void);
 
+int is_num(char *str);
+
+/*Opcodes protos*/
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+
 #endif /*__MONTY_H__*/
