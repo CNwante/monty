@@ -22,7 +22,7 @@ int main(int argc, char **argv)
     }
 
     close_strem();
-    /*free_args_mem();*/
+    free_args_mem();
 
     return (0);
 }
