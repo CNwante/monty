@@ -75,11 +75,17 @@ void exec_opcode(void);
 void free_tokens_mem(void);
 
 int is_num(char *str);
+void pop_stack(void);
+void free_args_mem();
+void free_head(void);
+void free_stack(stack_t *head);
+void free_all_mem(void);
 
 /*Opcodes protos*/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif /*__MONTY_H__*/
