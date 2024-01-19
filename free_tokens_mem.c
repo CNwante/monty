@@ -1,19 +1,21 @@
 #include "monty.h"
 
-/*Betty docs goes here*/
-
+/**
+ * free_tokens_mem - Frees the allocated memory for tokens.
+ */
 void free_tokens_mem(void)
 {
-    int i = 0;
+	int i = 0;
 
-    if (args->tokens == NULL)
-        return;
+	if (args->tokens == NULL)
+		return;
 
-    while (args->tokens[i])
-    {
-        free(args->tokens[i]);
-        i++;
-    }
-    free(args->tokens);
-    args->tokens = NULL;
+	while (args->tokens[i])
+	{
+		free(args->tokens[i]);
+		i++;
+	}
+
+	free(args->tokens);
+	args->tokens = NULL;
 }

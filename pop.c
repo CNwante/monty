@@ -4,7 +4,8 @@
  * pop - Pop the very top element of the stack
  * @stack: The Stack pointer to the top
  * @line_number: Line where the bytecode file is
- * Return: Always Void
+ *
+ * Return: Always void
  */
 void pop(stack_t **stack, unsigned int line_number)
 {

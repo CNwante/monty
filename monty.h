@@ -41,10 +41,16 @@ typedef struct instruction_s
  * struct argument_s - Store variables.
  * @stream: Connects to the stream from a file.
  * @text_line: String read from the stream.
+ * @line_number: Tracks current line number.
+ * @tokens: Stores tokens from text_line.
+ * @instruction: A valid instruction from text_line.
+ * @num_tokens: Number of tokens created from text_line.
+ * @head: Top of the stack (doubly linked lists of struct stack_s).
+ * @stack_length: Tracks the number of nodes in the stack.
+ * @stack: Used to determine whether to use stack/queue data structure.
  *
  * Description: Variables for storing functions
  */
-
 typedef struct argument_s
 {
 	FILE *stream;
@@ -66,7 +72,7 @@ void malloc_failed(void);
 void fopen_failed(char *file_name);
 void invalid_opcode(void);
 
-void init_args();
+void init_args(void);
 void file_stream(char *file_name);
 void tokenize(void);
 void close_strem(void);
@@ -76,7 +82,7 @@ void free_tokens_mem(void);
 
 int is_num(char *str);
 void pop_stack(void);
-void free_args_mem();
+void free_args_mem(void);
 void free_head(void);
 void free_stack(stack_t *head);
 void free_all_mem(void);
