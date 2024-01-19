@@ -15,7 +15,10 @@ void init_args()
         malloc_failed();
 
     args->stream = NULL;
+    args->head = NULL;
     args->text_line = NULL;
     args->num_tokens = 0;
     args->line_number = 0;
+    args->stack_length = 0;
+    args->stack = 1;
 }
