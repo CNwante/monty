@@ -53,6 +53,9 @@ typedef struct argument_s
 	char **tokens;
 	char num_tokens;
 	instruction_t *instruction;
+	stack_t *head;
+	int stack_length;
+	int stack;
 } argument_t;
 
 extern argument_t *args;
