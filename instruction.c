@@ -23,7 +23,8 @@ void get_opcode(void)
 	instruction_t actions[] = {
 		{"push", &push}, {"pop", &pop},
 		{"pint", &pint}, {"swap", &swap},
-		{"pall", &pall}, {NULL, NULL}
+		{"pall", &pall}, {"add", &add},
+		{NULL, NULL}
 	};
 
 	if (args->num_tokens == 0)
