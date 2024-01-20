@@ -25,7 +25,11 @@ void get_opcode(void)
 		{"pint", &pint}, {"swap", &swap},
 		{"pall", &pall}, {"add", &add},
 		{"nop", &nop}, {"sub", &sub},
-		{NULL, NULL}
+		{"div", &_div}, {"mul", &mul},
+		{"rotl", &rotl}, {"rotr", &rotr},
+		{"stack", &stack}, {"queue", &queue},
+		{"pstr", &pstr}, {"pchar", &pchar},
+		{"mod", &mod}, {NULL, NULL}
 	};
 
 	if (args->num_tokens == 0)
