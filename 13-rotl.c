@@ -6,7 +6,7 @@
  * @line_number: Line number where the rotl function is called.
  */
 
-void rotr(stack_t **stack, unsigned int line_number)
+void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *last;
 
@@ -30,5 +30,5 @@ void rotr(stack_t **stack, unsigned int line_number)
 	last->next = args->head;
 	last->prev = NULL;
 
-	arguments->head = last;
+	args->head = last;
 }
