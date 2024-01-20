@@ -88,6 +88,8 @@ void free_head(void);
 void free_stack(stack_t *head);
 void free_all_mem(void);
 
+FILE *fdopen(int fd, const char *mode);
+
 /*Opcodes protos*/
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
