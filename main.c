@@ -2,7 +2,7 @@
 #define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
-argument_t *args = NULL;
+argument_t *args;
 
 /**
  * main - Entry point of the monty program.
