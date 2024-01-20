@@ -19,7 +19,17 @@ void fopen_failed(char *file_name)
  */
 void file_stream(char *file_name)
 {
-	args->stream = fopen(file_name, "r");
-	if (args->stream == NULL)
+	int fd;
+
+	fd = open(file_name, O_RDONLY);
+	
+	if (fd == -1)
 		fopen_failed(file_name);
+       	args->stream = fdopen(fd, "r");
+	
+	if (args->stream == NULL)
+	{
+		close(fd);
+		fopen_failed(file_name);
+	}
 }
