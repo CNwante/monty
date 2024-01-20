@@ -24,6 +24,7 @@ void get_opcode(void)
 		{"push", &push}, {"pop", &pop},
 		{"pint", &pint}, {"swap", &swap},
 		{"pall", &pall}, {"add", &add},
+		{"nop", &nop}, {"sub", &sub},
 		{NULL, NULL}
 	};
 
